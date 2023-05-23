@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  background: #1d1d1d;
+}
+
+.header-top * {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-top__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-top__left > button[type="button"] {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.header-top__left > a {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.header-top__center {
+  display: flex;
+  align-items: center;
+}
+
+.header-top__center > a {
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.header-top__center .active {
+  background: #ed1331;
+}
+
+.header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-top-right * {
+  font-size: 20px;
+}
+
+.header-top-right > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ========= header-navbar ======== */
+.header-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 5%;
+  gap: 25px;
+}
+
+.header-navbar * {
+  text-decoration: none;
+}
+
+.header-navbar > a {
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #565656;
+}
+
+.header-navbar > a::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #ed1331;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.header-navbar > a:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header-top__left > button[type="button"] {
+    display: flex;
+  }
+
+  .header-top__center {
+    display: none;
+  }
+
+  .header-top-right > :nth-child(3) {
+    display: none;
+  }
+  .header-navbar {
+    display: none;
+  }
+}
